@@ -78,12 +78,13 @@ Now, to understand docker docker let's continue our discussion about the problem
 
 The problem was : _conflicting versions of application dependencies on different linux flavours_.
 
-<!-- TODO -->
-
-<!--
 ### Containers
 
-Think of containers as the boxes, holding your apps. They help you create a virtual space in your disk holding all your required softwares and libraries.
+Containers are isolated wrappers for your app. You app only knows about the container it is currently running.
+
+In terms of object oriented programming, you might describe an **object** as _some data stored in RAM_. And further objects are created with the help of classes. Similarly, you can think of containers as running instance of an image.
+
+Now, what is an image ? we will talk about it later.
 
 To clarify the above statement, let's take an example:
 
@@ -107,4 +108,10 @@ So, the above figure demonstrates that _container is just an isolation between p
 
 1. First container runs instance of `nodejs` and `mysql`
 2. Second container runs instance of `mongodb` and multiple other apps if you need to.
-3. The third container runs an instance of `redis` database. -->
+3. The third container runs an instance of `redis` database.
+
+### Images
+
+Images are the core software that runs on top of linux kernal. Images are used to create containers, which in turn runs your application inside them.
+
+Example, Ubuntu is a software that talks with the <em>Linux Kernal</em>. The kernal in turn interacts with the hardware, and allows ubuntu to perform calculations or tasks.
