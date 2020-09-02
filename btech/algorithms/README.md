@@ -143,6 +143,127 @@ So, we just improved our algorithm, but it can be improved further, this is the 
 
 Next, we will ask the question, **will this algorithm work if the user has a small amount of RAM, or processing power ?**. And the answer to this question will be given by process of analysis of algorithm, we will discuss it next!
 
+### Fizz Buzz problem
+
+Before, I proceed to design and analysis of the algorithm, I want to talk about the most popular problem in programming, It is known as FizzBuzz problem.
+
+The problem will provide us a clean and easy idea, of what an algorithm exactly is?. This will provide you some experience with algorithms, and definitely going to help you.
+
+Fizz Buzz is a problem, where you are given a number, and you need to figure out whether the number is multiple of 3 or is it multiple of 5 or both 3 and 5. It would look something like this:
+
+```txt
+num = 5
+
+# If the number is multiple of 3: print fizz
+# If the number is multiple of 5: print fuzz
+# If the number is multiple of both 3 and 5: print fizzbuzz
+```
+
+The problem is quite easy to implement. So, let's try to solve the problem. For solving the problem, what is the steps you would follow ?
+
+In order to solve the problem, I would need some inputs and some sample outputs. The sample inputs and outputs would help us to understand the problem.
+
+So, let's take some sample inputs and outputs:
+
+```sh
+$ Enter a number : 3
+fizz
+
+$ Enter a number : 5
+buzz
+
+$ Enter a number : 15
+fizzbuzz
+```
+
+So, let's implement this in programming language:
+
+```py
+# Ask user for a number
+num = int(input("Enter a number: "))
+
+# Check if the number is multiple of 3 and 5
+if num % 3 == 0 and num % 5 == 0:
+    print("fizzbuzz")
+elif num % 3 == 0:
+    print("fizz")
+elif num % 5 == 0:
+    print("buzz")
+
+```
+
+```cpp
+#include <iostream>
+
+int main(void){
+    // Store the number
+    int num = 0;
+
+    // Ask user for a number
+    std::cout << "Enter a number: ";
+    std::cin >> num;
+
+    // Check if the number is multiple of 3 and 5
+    if(num % 3 == 0 && num % 5 == 0)
+        std::cout << "fizzbuzz\n";
+    else if(num % 3 == 0)
+        std::cout << "fizz\n";
+    else if(num % 5 == 0)
+        std::cout << "buzz\n";
+
+    return 0;
+}
+```
+
+Now, let's test the algorithm if it works!. And you will see, infact the algorithm actually works.
+
+So, let's take a last step and think about what can be improved in the algorithm.
+
+I see that the first `if` statement is doing two operations, those are: check if the number if multiple of 3 and then checking if the number is multiple of 5. These operations can be reduced to single operation.
+
+Here is final optimized code:
+
+```py
+# Ask user for a number
+num = int(input("Enter a number: "))
+
+# Check if the number is multiple of 3 and 5
+if num % 15 == 0:
+    print("fizzbuzz")
+elif num % 3 == 0:
+    print("fizz")
+elif num % 5 == 0:
+    print("buzz")
+
+```
+
+```cpp
+#include <iostream>
+
+int main(void){
+    // Store the number
+    int num = 0;
+
+    // Ask user for a number
+    std::cout << "Enter a number: ";
+    std::cin >> num;
+
+    // Check if the number is multiple of 3 and 5
+    if(num % 15 == 0)
+        std::cout << "fizzbuzz\n";
+    else if(num % 3 == 0)
+        std::cout << "fizz\n";
+    else if(num % 5 == 0)
+        std::cout << "buzz\n";
+
+    return 0;
+}
+```
+
+And now, you are good to proceed further, I think this gave you some idea about solving problems, This process of thinking step by step to solve a problem is know an algorithmic problem solving.
+
+Now, let's proceed further and figure out designing an algorithm, after designing an algorithm, we will talk about checking _complexity_ of the algorithm.
+
 ### Performance Analysis (Time and space complexity)
 
 There are saveral things, we need to analyze about an algorithm. But the most common are:
@@ -158,7 +279,7 @@ We will discuss each of these in detail. Let's get started:
 
 **Space Analysis** is done to check the storage used by our algorithm, It provides us sufficient information, to mark a specific algorithm as: `Space Hungry` or `Space Efficient`
 
-And together, _Time Analysis_ and _Space Analysis_ helps us mark a algorithm as: _Efficient_, _In-Efficient_
+And together, _Time Analysis_ and _Space Analysis_ helps us mark a algorithm as: _Efficient_, _Non-Efficient_
 
 Let's take a simple example to understand it. The example would be using some search algorithms:
 
@@ -180,9 +301,9 @@ The first way would be something as follows:
 
 - Check the element at index: length / 2 (Provides the middle element of array)
 - Check if the item is less than middle element
-- If the element is in the middle, then we will only check left side of array
+- If the element is lesser than middle, then we will only check left side of array
 - Else if the element is greater than the middle element then we will check right side of array
-- Else if the element is equal to the middle element then the index of the array will be: length / 2
+- Else if the element is equal to the middle element then the index of the array will be: length / 2 (middle element)
 
 And another approach would be something as follows:
 
@@ -559,7 +680,7 @@ for index in range(start_index, end_index):
 
 The result tells us clearly, what exactly is the problem with our code, the problem is we are hitting _inside right_ block each time, and it is also right.
 
-So, the solution would be remove the last else block and everything will work as expected.
+So, the solution would be remove the last else block and add the continue block and everything will work as expected.
 
 Here is the final code with removed commments
 
@@ -574,8 +695,10 @@ for index in range(start_index, end_index):
     middle = int(end_index / 2)
     if target < nums[middle]:
         end_index = middle
+        continue
     elif target > nums[middle]:
         start_index = middle
+        continue
     elif target == nums[middle]:
         print(f"Element is present at: {middle}")
         break
@@ -603,6 +726,115 @@ If your answer is yes, because it makes sense to say that **more operations will
 And that is exactly, what we will be doing in this case, and that leads us to next topic of best, worst and average cases. We wil see you in next module, where we will actually provide you a way to determine space and time complexity in simple ways, without much of mathematical analysis.
 
 ### Best, average and Worst case
+
+Now, We have an algorithm to search for any number in a given array. We created this algorithm in previous module. The algorithm is as follows:
+
+```py
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+target = 5
+
+start_index = 0
+end_index = len(nums)
+
+for index in range(start_index, end_index):
+    middle = int(end_index / 2)
+    if target < nums[middle]:
+        end_index = middle
+        continue
+    elif target > nums[middle]:
+        start_index = middle
+        continue
+    elif target == nums[middle]:
+        print(f"Element is present at: {middle}")
+        break
+    print("Element is not in the list")
+    break
+
+```
+
+Now, it's time to test our algorithm in three different conditions:
+
+- What if the target element is exactly at the middle of array?
+- What if the target element is at last or first position of the array?
+- What if the target element is at not in the array?
+
+The answer to all above questions are exactly what _Best_, _Worst_ and _Average_ case provides us.
+
+| Case         | Description                                         | Example                                       |
+| ------------ | --------------------------------------------------- | --------------------------------------------- |
+| Best Case    | Problem is solved only with one operation.          | Element is present exactly at middle of array |
+| Average Case | Problem is solved with some operations.             | Element is present somewhere in the array     |
+| Worst Case   | Problem is solved with highest number of operations | Element is not present in the array.          |
+
+Now, to check all these cases, let's write some code and find out all these cases.
+
+The solution to find best, average and worst case is to count number of operations. We can do that using print statement or using a variable
+
+```py
+# ...
+
+for index in range(start, middle):
+    print("inside loop")
+
+    if condition:
+        print("inside condition")
+```
+
+The following approach will provide us number of operations and and also flow of our program. So, let's use the print statements and find out, how many operations does happen in our algorithm for all 3 cases (best, average, worst).
+
+Here is the code for it:
+
+```py
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+target = 5
+
+start_index = 0
+end_index = len(nums)
+
+for index in range(start_index, end_index):
+    print("Inside loop")
+
+    middle = int(end_index / 2)
+    if target < nums[middle]:
+        print("Inside if")
+        end_index = middle
+        continue
+    elif target > nums[middle]:
+        print("Inside if")
+        start_index = middle
+        continue
+    elif target == nums[middle]:
+        print(f"Element is present at: {middle}")
+        break
+    print("Element is not in the list")
+    break
+
+```
+
+To test for different cases, just change the `target` variable to some value and you will see the results:
+
+Here are the results in my case
+
+```sh
+# Best case, when target = 5
+Inside loop (1 time)
+Element is present at: 4
+
+# Average case, when target = 3
+Inside loop (2 times)
+Inside if (1 time)
+Element is present at: 2
+
+# Worst case, when target = 0
+Inside loop (9 times)
+Inside if (9 times)
+```
+
+So, counting the number of operations, we can say the following:
+
+- Our algorithm will find the element first time if it at middle of the array.
+- Our algorithm will find the element in (less than length of array) times if it inside the array
+- Our algorithm will perform max of (length of array) operations if the element is not in the array.
 
 ### Asymptotic Notation (Big OH, Omega and Theta)
 
