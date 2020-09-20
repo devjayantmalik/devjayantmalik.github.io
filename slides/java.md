@@ -67,7 +67,7 @@ A list of supported variables is as follows:
 | ------ | ------------- | ----------------------------------------- | ------------------------------- |
 | char   | Character     | Allows only single character to be stored | `char grade = 'a';`             |
 | String | String        | Allows multiple characters to be stored.  | `String name = "Jayant Malik";` |
-| long   | long integers | Allows integers with much heigher range.  | `double marks = 10.33;`         |
+| long   | long integers | Allows integers with much heigher range.  | `long marks = 10.33;`           |
 
 ---
 
@@ -217,7 +217,7 @@ public class StandardInput{
         Scanner scanner = new Scanner(System.in);
 
         // Read the string
-        int first = scanner.nextLine();
+        String first = scanner.nextLine();
 
         // Read the boolean(only true or false as "string")
         float second = scanner.nextBoolean();
@@ -227,6 +227,63 @@ public class StandardInput{
 
         // Read the long integer
         long fourth = scanner.nextLong();
+    }
+}
+```
+
+---
+
+## Array
+
+```java
+public class JaiBharat{
+
+   public static void main(String[] args) {
+      double[] points = {1.9, 2.9, 3.4, 3.5};
+      double[] nums = new double[10];
+
+      // Print all the array elements
+      for (int i = 0; i < points.length; i++) {
+         System.out.println(points[i])
+      }
+   }
+}
+```
+
+---
+
+## Arrays: Example
+
+```java
+public class JaiBharat{
+    public static void main(String[] args){
+      double[] nums = {10, 20, 30, 40, 50, 60, 70, 80};
+
+      // Summing all elements
+      double total = 0;
+      for (int i = 0; i < nums.length; i++) {
+         total += nums[i];
+      }
+      System.out.println("Total is " + total);
+    }
+}
+```
+
+---
+
+## Arrays: Example
+
+```java
+public class JaiBharat{
+    public static void main(String[] args){
+      double[] nums = {10, 20, 30, 40, 50, 60, 70, 80};
+
+      // Finding the largest element
+      double max = nums[0];
+      for (int i = 1; i < nums.length; i++) {
+         if (nums[i] > max) max = nums[i];
+      }
+      System.out.println("Max is " + max);
     }
 }
 ```
@@ -497,13 +554,13 @@ public class Strings{
 ```java
 public class Strings{
     public static void main(String args[]){
-        const message = "Jai, Hind!";
+        String message = "Jai, Hind!";
 
         // Replace ! with 🙏
-        const replaced = message.replace("!", "🙏");
+        String replaced = message.replace("!", "🙏");
 
         // Replace All Jai with 🙏
-        const updated = message.replaceAll("Jai", "🙏");
+        String updated = message.replaceAll("Jai", "🙏");
 
         // Uppercase string
         System.out.println(message.toUpperCase());
@@ -897,6 +954,91 @@ public class StartHere{
     }
 }
 ```
+
+---
+
+## Encapsulation
+
+Encapsulation, states that you should secure your object properties from invalid data.
+
+```java
+public class BankAccount{
+    private double balance = 0;
+
+    public void setBalance(double amount){ if(amount > 0) this.balance = balance; }
+    public double getBalance(double amount){ if(amount > 0) return this.balance; }
+}
+
+public class Main{
+    public static void main(String[] args){
+        BankAccount acc = new BankAccount();
+        acc.balance = 100; // 🔥 Error: You can't change balance directly.
+        acc.setBalance(100); // Set the balance to 100
+        acc.getBalance(); // 100
+    }
+}
+```
+
+---
+
+## Abstraction
+
+Hide unnecessary details.
+
+```java
+public class MailService{
+    // We only care about sending email outside this class.
+    private void login(){}
+    private void verifyCredentials(){}
+
+    // Expose the send functionality
+    public void send(){ System.out.println("Email sent"); }
+}
+```
+
+Here, `login` and `verifyCredentials` are marked as private, because the authentication should be internally handled by MailService, we only care about send functionality outside this class.
+
+---
+
+## Polymorphism
+
+A function existing in many forms. Example `Base` class could have `draw` method and all inheriting class should implement it.
+
+```java
+abstract class DrawingBoard{ public void draw(){} }
+
+public class ArtBoard extends DrawingBoard{
+    public void draw(){ System.out.println("Artboard drawing..."); }
+}
+
+public class SketchBoard extends DrawingBoard{
+    public void draw(){ System.out.println("Artboard drawing..."); }
+}
+```
+
+---
+
+## Inheritence
+
+Prevent code duplication, and reuse the code across different classes.
+
+```java
+public class Electronics{
+    protected double price = 0;
+    protected int stock = 0;
+
+    public void addStock(int quantity){ this.stock += quantity; }
+    public void sell(int quantity){ this.stock -= quantity; }
+    public void addPrice(int amount){ this.price = amount; }
+    public double getPrice(){ return this.price; }
+}
+
+public class Laptop extends Electronics{}
+public class Freezer extends Electronics{}
+public class Mobile extends Electronics{}
+```
+
+> Here, `Laptop`, `Freezer` and `Mobile` class will have all the functionalities of electronics.
 
 ---
 
