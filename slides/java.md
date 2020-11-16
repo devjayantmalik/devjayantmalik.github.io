@@ -756,7 +756,7 @@ a1.introduce();
 // Possible
 public class Human extends Animal{
     // Available from Animal class
-    public danger(){ this.hit(); }
+    public void danger(){ this.hit(); }
 }
 
 Human h1 = new Human();
