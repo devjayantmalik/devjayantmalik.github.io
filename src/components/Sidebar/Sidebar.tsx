@@ -18,7 +18,7 @@ interface ISidebarProps {}
 
 export const Sidebar: React.FC<ISidebarProps> = () => {
   return (
-    <aside className="sidebar" data-sidebar>
+    <aside className="sidebar">
       <div className="sidebar-info">
         <figure className="avatar-box">
           <Image src={me} width={180} height={180} alt="Jayant Malik" />
@@ -29,12 +29,8 @@ export const Sidebar: React.FC<ISidebarProps> = () => {
           </h1>
           <p className="title">Software Engineer</p>
         </div>
-        <button className="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-          <ChevronDownOutlined />
-        </button>
       </div>
-      <div className="sidebar-info_more">
+      <div>
         <div className="separator" />
         <ul className="contacts-list">
           <li className="contact-item">
@@ -82,7 +78,7 @@ export const Sidebar: React.FC<ISidebarProps> = () => {
           </li>
         </ul>
         <div className="separator" />
-        <ul className="social-list">
+        <ul className="flex flex-row md:justify-start sm:justify-center items-center gap-4 pb-4 pl-6">
           <li className="social-item">
             <a
               href="/content/Jayant-CV.pdf"
