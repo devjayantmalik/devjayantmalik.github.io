@@ -3,14 +3,15 @@ import React from "react";
 import me from "~assets/pics/me.png";
 import {
   ChevronDownOutlined,
-  MailOutlined,
-  PhonePortraitOutlined,
-  CalendarOutlined,
-  LocationOutlined,
   DownloadOutlined,
   EarthOutlined,
-  TwitterLogo,
   GithubLogo,
+  LinkedinLogo,
+  LocationOutlined,
+  MailOutlined,
+  ManOutlined,
+  PhonePortraitOutlined,
+  TwitterLogo,
 } from "~src/components/Icons";
 
 interface ISidebarProps {}
@@ -63,11 +64,11 @@ export const Sidebar: React.FC<ISidebarProps> = () => {
           </li>
           <li className="contact-item">
             <div className="icon-box">
-              <CalendarOutlined />
+              <ManOutlined />
             </div>
             <div className="contact-info">
-              <p className="contact-title">Birthday</p>
-              <time dateTime="1982-06-23">July 28, 2002</time>
+              <p className="contact-title">Gender</p>
+              <p className="contact-link">Male</p>
             </div>
           </li>
           <li className="contact-item">
@@ -92,17 +93,38 @@ export const Sidebar: React.FC<ISidebarProps> = () => {
             </a>
           </li>
           <li className="social-item">
-            <a href="https://www.developbharat.com" className="social-link">
+            <a
+              target="_blank"
+              href="https://www.developbharat.com"
+              className="social-link"
+            >
               <EarthOutlined />
             </a>
           </li>
           <li className="social-item">
-            <a href="https://twitter.com/BharatDevelop" className="social-link">
+            <a
+              href="https://www.linkedin.com/in/devjayantmalik"
+              target="_blank"
+              className="social-link"
+            >
+              <LinkedinLogo />
+            </a>
+          </li>
+          <li className="social-item">
+            <a
+              target="_blank"
+              href="https://twitter.com/BharatDevelop"
+              className="social-link"
+            >
               <TwitterLogo />
             </a>
           </li>
           <li className="social-item">
-            <a href="https://github.com/devjayantmalik" className="social-link">
+            <a
+              target="_blank"
+              href="https://github.com/devjayantmalik"
+              className="social-link"
+            >
               <GithubLogo />
             </a>
           </li>
