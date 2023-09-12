@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Icon */
+.ionicon {
+  @apply w-[1em] h-[1em];
+}
