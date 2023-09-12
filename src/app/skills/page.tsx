@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { skillset } from "./data";
+import { skillset } from "~src/data";
 
 const Skills: NextPage = () => {
   return (

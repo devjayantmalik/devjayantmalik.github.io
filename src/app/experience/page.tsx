@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import { BoatOutlined, BookOutlined } from "~src/components/Icons";
-import { education, experience } from "./data";
+import { education, experience } from "~src/data";
 
 const Certifications: NextPage = () => {
   return (

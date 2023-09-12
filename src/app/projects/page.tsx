@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Image from "next/image";
-import { projects } from "./data";
+import { projects } from "~src/data";
 
 const Portfolio: NextPage = () => {
   return (
