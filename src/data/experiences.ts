@@ -6,9 +6,9 @@ interface IExperience {
 
 export const experience: IExperience[] = [
   {
-    title: "Founder & CEO",
+    title: "Freelancer",
     dateInterval: "Mar 2023 - Present",
-    company: "Develop Bharat",
+    company: "Self-Employed",
   },
   {
     title: "Senior NodeJS Consultant",
