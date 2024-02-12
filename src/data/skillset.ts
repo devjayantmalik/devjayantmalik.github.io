@@ -10,6 +10,15 @@ interface ISkillset {
 
 export const skillset: ISkillset[] = [
   {
+    category: "Frontend",
+    skills: [
+      { name: "React.JS", percent: 90 },
+      { name: "Solid.JS", percent: 30 },
+      { name: "HTML + CSS + JS", percent: 90 },
+      { name: "Next.JS", percent: 90 },
+    ],
+  },
+  {
     category: "Backend",
     skills: [
       { name: "Node.JS", percent: 90 },
@@ -18,6 +27,14 @@ export const skillset: ISkillset[] = [
       { name: "Fastify.JS", percent: 90 },
       { name: "Nest.JS", percent: 90 },
       { name: "Adonis.JS", percent: 90 },
+    ],
+  },
+  {
+    category: "CSS Frameworks",
+    skills: [
+      { name: "Tailwind CSS", percent: 80 },
+      { name: "Bootstrap CSS", percent: 100 },
+      { name: "Bulma CSS", percent: 100 },
     ],
   },
   {
@@ -52,12 +69,11 @@ export const skillset: ISkillset[] = [
     ],
   },
   {
-    category: "Frontend",
+    category: "Cloud Providers",
     skills: [
-      { name: "React.JS", percent: 90 },
-      { name: "Solid.JS", percent: 30 },
-      { name: "HTML + CSS + JS", percent: 90 },
-      { name: "Next.JS", percent: 90 },
+      { name: "AWS", percent: 50 },
+      { name: "Digital Ocean", percent: 100 },
+      { name: "Google Cloud", percent: 20 },
     ],
   },
   {
@@ -67,22 +83,6 @@ export const skillset: ISkillset[] = [
       { name: "Kotlin", percent: 80 },
       { name: "React Native", percent: 90 },
       { name: "Kotlin Multi Platform", percent: 50 },
-    ],
-  },
-  {
-    category: "Cloud Providers",
-    skills: [
-      { name: "AWS", percent: 50 },
-      { name: "Digital Ocean", percent: 100 },
-      { name: "Google Cloud", percent: 20 },
-    ],
-  },
-  {
-    category: "CSS Frameworks",
-    skills: [
-      { name: "Tailwind CSS", percent: 80 },
-      { name: "Bootstrap CSS", percent: 100 },
-      { name: "Bulma CSS", percent: 100 },
     ],
   },
 ];

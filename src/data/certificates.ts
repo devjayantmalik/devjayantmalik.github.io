@@ -1,6 +1,6 @@
 interface ICertificate {
   title: string;
-  issuer: "HackerRank" | "Udemy";
+  issuer: "HackerRank" | "Udemy" | "UiPath";
   issueDate: string;
   href: string;
 }
@@ -51,7 +51,7 @@ export const certificates: ICertificate[] = [
   {
     title: "React (Basic)",
     issuer: "HackerRank",
-    href: "React (Basic)",
+    href: "https://www.hackerrank.com/certificates/2b56d95bfb53",
     issueDate: "Aug 2022",
   },
 ];
