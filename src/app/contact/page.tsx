@@ -18,7 +18,7 @@ const Contact: NextPage = () => {
         </figure>
       </section> */}
       <section className="contact-form">
-        <h3 className="h3 form-title">Contact Form</h3>
+        <h3 className="h3 form-title">Contact Details</h3>
         <ul className="timeline-list">
           <li className="timeline-item">
             <h4 className="h4 timeline-item-title">Name</h4>
