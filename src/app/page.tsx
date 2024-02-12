@@ -29,23 +29,7 @@ export default function Home() {
       <section className="service">
         <h3 className="h3 service-title">What i&apos;m doing</h3>
         <ul className="service-list">
-          <li className="service-item">
-            <div className="service-icon-box">
-              <Image
-                src={iconDesign}
-                alt="design icon"
-                width={40}
-                height={40}
-              />
-            </div>
-            <div className="service-content-box">
-              <h4 className="h4 service-item-title">Technical Consulting</h4>
-              <p className="service-item-text">
-                The most efficient team management and technical consulting made
-                at a professional level.
-              </p>
-            </div>
-          </li>
+         
           <li className="service-item">
             <div className="service-icon-box">
               <Image src={iconDev} alt="Web development icon" width={40} />
@@ -64,7 +48,24 @@ export default function Home() {
             <div className="service-content-box">
               <h4 className="h4 service-item-title">Mobile apps</h4>
               <p className="service-item-text">
-                Professional development of applications for iOS and Android.
+                Professional development of applications for both iOS and Android.
+              </p>
+            </div>
+          </li>
+          <li className="service-item">
+            <div className="service-icon-box">
+              <Image
+                src={iconDesign}
+                alt="design icon"
+                width={40}
+                height={40}
+              />
+            </div>
+            <div className="service-content-box">
+              <h4 className="h4 service-item-title">Technical Consulting</h4>
+              <p className="service-item-text">
+                The most efficient team management and technical consulting made
+                at a professional level.
               </p>
             </div>
           </li>

@@ -24,7 +24,7 @@ export const experience: IExperience[] = [
   },
 
   {
-    title: "Freelancer",
+    title: "Independent Developer",
     dateInterval: "Mar 2023 - Present",
     company: "Self-Employed",
   },

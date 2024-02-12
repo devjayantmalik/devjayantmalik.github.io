@@ -54,4 +54,10 @@ export const certificates: ICertificate[] = [
     href: "https://www.hackerrank.com/certificates/2b56d95bfb53",
     issueDate: "Aug 2022",
   },
+  {
+    title: "UiPath",
+    issuer: "UiPath",
+    href: "http://uipath.com/",
+    issueDate: "Aug 2022",
+  },
 ];
