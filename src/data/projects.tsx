@@ -52,4 +52,4 @@ export const projects: IProject[] = [
     icon: developbharat,
     workTenure: "Jun 2023 - Current",
   },
-];
+].toReversed();
