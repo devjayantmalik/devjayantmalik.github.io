@@ -28,11 +28,11 @@ export const Navbar: React.FC<INavbarProps> = () => {
           <NextLink
             className={clsx(
               "navbar-link",
-              pathname === Routes.experience ? "active" : null
+              pathname === Routes.certifications ? "active" : null
             )}
-            href={Routes.experience}
+            href={Routes.certifications}
           >
-            Experience
+            Certifications
           </NextLink>
         </li>
         <li className="navbar-item">
@@ -46,7 +46,17 @@ export const Navbar: React.FC<INavbarProps> = () => {
             Skills
           </NextLink>
         </li>
-
+        <li className="navbar-item">
+          <NextLink
+            className={clsx(
+              "navbar-link",
+              pathname === Routes.experience ? "active" : null
+            )}
+            href={Routes.experience}
+          >
+            Experience
+          </NextLink>
+        </li>
         <li className="navbar-item">
           <NextLink
             className={clsx(
@@ -58,7 +68,7 @@ export const Navbar: React.FC<INavbarProps> = () => {
             Projects
           </NextLink>
         </li>
-        <li className="navbar-item">
+        {/* <li className="navbar-item">
           <NextLink
             className={clsx(
               "navbar-link",
@@ -68,7 +78,7 @@ export const Navbar: React.FC<INavbarProps> = () => {
           >
             Contact
           </NextLink>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );

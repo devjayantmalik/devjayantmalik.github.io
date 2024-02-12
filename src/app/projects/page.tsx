@@ -11,7 +11,7 @@ const Portfolio: NextPage = () => {
       <section>
         <ul className="grid grid-cols-3 gap-x-4 gap-y-10">
           {projects.map(({ title, href, icon, subtitle }) => (
-            <a key={title} target="_blank" href={href}>
+            <div key={title}>
               <Image
                 className="rounded mb-4 overflow-hidden w-full h-[200px] object-cover"
                 src={icon}
@@ -22,7 +22,7 @@ const Portfolio: NextPage = () => {
               />
               <h3 className="project-title">{title}</h3>
               <p className="project-category mt-1">{subtitle}</p>
-            </a>
+            </div>
           ))}
         </ul>
       </section>

@@ -1,32 +1,13 @@
 import type { NextPage } from "next";
-import { BoatOutlined, BookOutlined } from "~src/components/Icons";
-import { education, experience } from "~src/data";
+import { BoatOutlined } from "~src/components/Icons";
+import { experience } from "~src/data";
 
-const Certifications: NextPage = () => {
+const Experience: NextPage = () => {
   return (
     <article>
       <header>
-        <h2 className="h2 article-title">Certifications</h2>
+        <h2 className="h2 article-title">Experience</h2>
       </header>
-      <section className="timeline">
-        <div className="title-wrapper">
-          <div className="icon-box">
-            <BookOutlined />
-          </div>
-          <h3 className="h3">Education</h3>
-        </div>
-        <ol className="timeline-list">
-          {education.map((edu) => (
-            <li key={edu.dateInterval} className="timeline-item">
-              <h4 className="h4 timeline-item-title">{edu.subject}</h4>
-              <span>
-                {edu.dateInterval} | {edu.place}
-              </span>
-              <p className="timeline-text">{edu.description}</p>
-            </li>
-          ))}
-        </ol>
-      </section>
       <section className="timeline">
         <div className="title-wrapper">
           <div className="icon-box">
@@ -48,4 +29,4 @@ const Certifications: NextPage = () => {
   );
 };
 
-export default Certifications;
+export default Experience;

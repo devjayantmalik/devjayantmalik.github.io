@@ -3,6 +3,7 @@ import developbharat from "~assets/images/projects/developbharat.webp";
 import eatoes from "~assets/images/projects/eatoes.webp";
 import mehramusicproduction from "~assets/images/projects/mehramusicproduction.webp";
 import mices from "~assets/images/projects/mices.webp";
+import nodejs from "~assets/images/projects/nodejs.webp";
 
 interface IProject {
   title: string;
@@ -39,5 +40,12 @@ export const projects: IProject[] = [
       "Jetpack Compose android application built for a private business to generate invoices and track patient reports. Also available on playstore.",
     href: "https://developbharat.github.io/MicesWebsite",
     icon: mices,
+  },
+  {
+    title: "YoutubeBot",
+    subtitle:
+      "A Robot to use Youtube Services",
+    href: "https://github.com/developbharat/YoutubeBot",
+    icon: nodejs,
   },
 ];

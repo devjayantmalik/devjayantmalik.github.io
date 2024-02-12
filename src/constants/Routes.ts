@@ -4,4 +4,5 @@ export const Routes = {
   contact: "/contact",
   experience: "/experience",
   skills: "/skills",
+  certifications: "/certifications",
 };
