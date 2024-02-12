@@ -16,14 +16,14 @@ export const projects: IProject[] = [
   {
     title: "Develop Bharat",
     subtitle:
-      "My Self funded project to Develop Products That Serve Humanity, Empowering a Self-Reliant Nation through Digital Innovation.",
+      "A venture to make India, a software independent Nation.",
     href: "https://www.developbharat.com",
     icon: developbharat,
   },
   {
     title: "Eatoes",
     subtitle:
-      "Android and Web Dashboard help businesses find delicious food options nearby and allow you to quickly browse through food reviews before ordering.",
+      "Android and Web Dashboard help food startups to grow their business.",
     href: "https://eatoes.com",
     icon: eatoes,
   },
