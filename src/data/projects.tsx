@@ -15,20 +15,18 @@ interface IProject {
 
 export const projects: IProject[] = [
   {
-    title: "Eatoes",
-    subtitle:
-      "Android and Web Dashboard help food startups to grow their business.",
-    href: "https://eatoes.com",
-    icon: eatoes,
-    workTenure: "Aug 2021 - Aug 2022",
+    title: "Develop Bharat",
+    subtitle: "A venture to make India, a software independent Nation.",
+    href: "https://www.developbharat.com",
+    icon: developbharat,
+    workTenure: "Jun 2023 - Current",
   },
   {
-    title: "Mehra Music Production",
-    subtitle:
-      "Web platform to distribute music and callertunes to all music stores such as Spotify, JioSaavn, iTunes etc.",
-    href: "https://mehramusicproduction.com",
-    icon: mehramusicproduction,
-    workTenure: "Nov 2022 - Feb 2023",
+    title: "YoutubeBot",
+    subtitle: "A Robot to use Youtube Services",
+    href: "https://github.com/developbharat/YoutubeBot",
+    icon: nodejs,
+    workTenure: "Jan 2024 - Feb 2024",
   },
   {
     title: "Mices",
@@ -39,17 +37,19 @@ export const projects: IProject[] = [
     workTenure: "Mar 2023 - Apr 2023",
   },
   {
-    title: "YoutubeBot",
-    subtitle: "A Robot to use Youtube Services",
-    href: "https://github.com/developbharat/YoutubeBot",
-    icon: nodejs,
-    workTenure: "Jan 2024 - Feb 2024",
+    title: "Mehra Music Production",
+    subtitle:
+      "Web platform to distribute music and callertunes to all music stores such as Spotify, JioSaavn, iTunes etc.",
+    href: "https://mehramusicproduction.com",
+    icon: mehramusicproduction,
+    workTenure: "Nov 2022 - Feb 2023",
   },
   {
-    title: "Develop Bharat",
-    subtitle: "A venture to make India, a software independent Nation.",
-    href: "https://www.developbharat.com",
-    icon: developbharat,
-    workTenure: "Jun 2023 - Current",
+    title: "Eatoes",
+    subtitle:
+      "Android and Web Dashboard help food startups to grow their business.",
+    href: "https://eatoes.com",
+    icon: eatoes,
+    workTenure: "Aug 2021 - Aug 2022",
   },
-].toReversed();
+];
