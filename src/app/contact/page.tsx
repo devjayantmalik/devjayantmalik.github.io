@@ -19,38 +19,24 @@ const Contact: NextPage = () => {
       </section>
       <section className="contact-form">
         <h3 className="h3 form-title">Contact Form</h3>
-        <form action="#" className="form" data-form>
-          <div className="input-wrapper">
-            <input
-              type="text"
-              name="fullname"
-              className="form-input"
-              placeholder="Full name"
-              required
-              data-form-input
-            />
-            <input
-              type="email"
-              name="email"
-              className="form-input"
-              placeholder="Email address"
-              required
-              data-form-input
-            />
-          </div>
-          <textarea
-            name="message"
-            className="form-input"
-            placeholder="Your Message"
-            required
-            data-form-input
-            defaultValue={""}
-          />
-          <button className="form-btn" type="submit" disabled data-form-btn>
-            <PaperPlaneOutlined />
-            <span>Send Message</span>
-          </button>
-        </form>
+        <ul className="timeline-list">
+          <li className="timeline-item">
+            <h4 className="h4 timeline-item-title">Name</h4>
+            <p className="timeline-text">Jayant Malik</p>
+          </li>
+          <li className="timeline-item">
+            <h4 className="h4 timeline-item-title">Mobile</h4>
+            <p className="timeline-text">+917015108956</p>
+          </li>
+          <li className="timeline-item">
+            <h4 className="h4 timeline-item-title">Email</h4>
+            <p className="timeline-text">work.jayantmalik@gmail.com</p>
+          </li>
+          <li className="timeline-item">
+            <h4 className="h4 timeline-item-title">Location</h4>
+            <p className="timeline-text">Chandigarh, India</p>
+          </li>
+        </ul>
       </section>
     </article>
   );

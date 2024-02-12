@@ -54,17 +54,8 @@ export const Sidebar: React.FC<ISidebarProps> = () => {
             <div className="contact-info">
               <p className="contact-title">Phone</p>
               <a href="tel:+917015108956" className="contact-link">
-                +91 (701) 510-8956
+                +91 701 510 8956
               </a>
-            </div>
-          </li>
-          <li className="contact-item">
-            <div className="icon-box">
-              <ManOutlined />
-            </div>
-            <div className="contact-info">
-              <p className="contact-title">Gender</p>
-              <p className="contact-link">Male</p>
             </div>
           </li>
           <li className="contact-item">
