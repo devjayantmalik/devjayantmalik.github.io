@@ -72,7 +72,7 @@ export const Sidebar: React.FC<ISidebarProps> = () => {
         <ul className="flex flex-row md:justify-start sm:justify-center items-center gap-4 pb-4 pl-6">
           <li className="social-item">
             <a
-              href="/content/Jayant-CV.pdf"
+              href="/content/Jayant-Resume.pdf"
               target="_blank"
               className="social-link"
             >
