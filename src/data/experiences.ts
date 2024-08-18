@@ -24,8 +24,20 @@ export const experience: IExperience[] = [
   },
 
   {
-    title: "Independent Developer",
-    dateInterval: "Mar 2023 - Present",
-    company: "Self-Employed",
+    title: "Founder",
+    dateInterval: "Mar 2023 - March 2024",
+    company: "Develop Bharat",
+  },
+
+  {
+    title: "Freelance",
+    dateInterval: "Mar 2023 - March 2024",
+    company: "Upwork",
+  },
+
+  {
+    title: "Software Engineer",
+    dateInterval: "Mar 2024 - Present",
+    company: "IIT Kanpur",
   },
 ];
